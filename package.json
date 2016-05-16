@@ -1,7 +1,7 @@
 {
-  "name": "spectacle-boilerplate",
-  "version": "1.0.1",
-  "description": "ReactJS Powered Presentation Framework",
+  "name": "primer-to-react",
+  "version": "1.0.0",
+  "description": "Primer to React slide deck for JavaScript Wednesday organised by KualaLumpurJS",
   "main": "lib/index.js",
   "scripts": {
     "clean": "rimraf dist",
