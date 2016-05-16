@@ -1,0 +1,24 @@
+// ES5 stateful class
+const HelloWorld = React.createClass({
+  render() {
+    return (
+      <h1>Hello World</h1>
+    )
+  }
+})
+
+// ES6 stateful class
+class HelloWorld extends React.Component {
+  render() {
+    return (
+      <h1>Hello World</h1>
+    )
+  }
+}
+
+// Stateless functional component
+const HelloWorld = () => {
+  return (
+    <h1>Hello World</h1>
+  )
+}

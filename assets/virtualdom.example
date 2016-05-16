@@ -1,0 +1,7 @@
+const HelloWorld = {
+  component: 'div',
+  props: { className: 'container' },
+  children: [
+    { component: 'h1', props: { className: 'header' }, children: 'Hello World' }
+  ]
+}

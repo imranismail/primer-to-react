@@ -22,7 +22,8 @@ import {
   Spectacle,
   Text
 } from "spectacle";
-
+// code slidz
+import CodeSlide from 'spectacle-code-slide';
 // Import image preloader util
 import preloader from "spectacle/lib/utils/preloader";
 
@@ -102,7 +103,7 @@ export default class Presentation extends React.Component {
               Fullstack devshop
             </Text>
             <Text textSize="2.0em" margin="25px 0px 0px" bold textColor="tertiary">
-              We mainly write Elixir, Phoenix and React
+              We write Elixir, Phoenix and React
             </Text>
           </Slide>
           <Slide transition={["slide"]} bgColor="primer" align="center center">
@@ -140,7 +141,7 @@ export default class Presentation extends React.Component {
               what does it do then?
             </Text></Appear>
             <List textColor="tertiary">
-              <Appear><ListItem>it deals with rendering and rerendering</ListItem></Appear>
+              <Appear><ListItem>it deals with rendering and rerendering 😎</ListItem></Appear>
               <Appear><ListItem>it leverages on VirtualDOM</ListItem></Appear>
               <Appear><ListItem>it lets you reason about your UI in terms of components</ListItem></Appear>
             </List>
@@ -150,32 +151,72 @@ export default class Presentation extends React.Component {
               How does it work?
             </Heading>
             <Layout>
-              <Appear><Fill>
+              <Fill>
                 <Text textSize="1.00em" padding="10%" margin="25px 0px 50px" bgColor="#7986CB" textColor="tertiary">
                   Components
                 </Text>
-              </Fill></Appear>
-              <Appear><Fill>
+              </Fill>
+              <Fill>
                 <Text textSize="1.00em" padding="10%" margin="25px 0px 50px" textColor="tertiary" align="center">
                   ➜
                 </Text>
-              </Fill></Appear>
-              <Appear><Fill>
+              </Fill>
+              <Fill>
                 <Text textSize="1.00em" padding="10%" margin="25px 0px 50px" bgColor="#43A047" textColor="tertiary">
                   VirtualDOM
                 </Text>
-              </Fill></Appear>
-              <Appear><Fill>
+              </Fill>
+              <Fill>
                 <Text textSize="1.00em" padding="10%" margin="25px 0px 50px" textColor="tertiary" align="center">
                   ➜
                 </Text>
-              </Fill></Appear>
-              <Appear><Fill>
+              </Fill>
+              <Fill>
                 <Text textSize="1.00em" padding="10%" margin="25px 0px 50px" bgColor="#EF5350" textColor="tertiary">
                   DOM
                 </Text>
-              </Fill></Appear>
+              </Fill>
             </Layout>
+            <Appear><Text textSize="1.00em" padding="2%" margin="10px 0px 50px" bgColor="#7986CB" textColor="tertiary">
+              Components
+            </Text></Appear>
+            <Appear><CodePane lang="js" source={require("raw!../assets/components.example")} margin="20px auto"/></Appear>
+          </Slide>
+          <Slide transition={["slide"]} bgColor="primer" align="center">
+            <Heading size={1} fit caps lineHeight={1} textColor="white">
+              How does it work?
+            </Heading>
+            <Layout>
+              <Fill>
+                <Text textSize="1.00em" padding="10%" margin="25px 0px 50px" bgColor="#7986CB" textColor="tertiary">
+                  Components
+                </Text>
+              </Fill>
+              <Fill>
+                <Text textSize="1.00em" padding="10%" margin="25px 0px 50px" textColor="tertiary" align="center">
+                  ➜
+                </Text>
+              </Fill>
+              <Fill>
+                <Text textSize="1.00em" padding="10%" margin="25px 0px 50px" bgColor="#43A047" textColor="tertiary">
+                  VirtualDOM
+                </Text>
+              </Fill>
+              <Fill>
+                <Text textSize="1.00em" padding="10%" margin="25px 0px 50px" textColor="tertiary" align="center">
+                  ➜
+                </Text>
+              </Fill>
+              <Fill>
+                <Text textSize="1.00em" padding="10%" margin="25px 0px 50px" bgColor="#EF5350" textColor="tertiary">
+                  DOM
+                </Text>
+              </Fill>
+            </Layout>
+            <Appear><Text textSize="1.00em" padding="2%" margin="10px 0px 50px" bgColor="#43A047" textColor="tertiary">
+              VirtualDOM
+            </Text></Appear>
+            <Appear><CodePane lang="js" source={require("raw!../assets/virtualdom.example")} margin="20px auto"/></Appear>
           </Slide>
         </Deck>
       </Spectacle>
