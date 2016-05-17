@@ -70,17 +70,17 @@ class Unsplash extends React.Component {
   }
 }
 
-const Image = ({ id, author, author_url, post_url, filename }) =>
-  <li className='gallery__image' key={ id }>
-    <a href={ author_url }>
-      <span>Author: { author }</span>
+const Image = (props) =>
+  <li className='gallery__image' key={ props.id }>
+    <a href={ props.author_url }>
+      <span>Author: { props.author }</span>
     </a>
-    <img src={ post_url } alt={ filename } />
+    <img src={ props.post_url } alt={ props.filename } />
   </li>
 
-const Gallery = ({ images }) =>
+const Gallery = (props) =>
   <ul className="gallery">
-    { images.map((image) => <Image { ...image } />) }
+    { props.images.map((image) => <Image { ...image } />) }
   </ul>
 
 class Unsplash extends React.Component {
