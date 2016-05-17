@@ -1,3 +1,15 @@
-<div>
+// case 1
+<Message title={'Hello World'} message={'Learn you some React for great good!!'} />
+
+<div className='container'>
   <h1>Hello World</h1>
+  <p>Learn you some React for great good!!</p>
+</div>
+
+// case 2
+<Message title={'Hello KLJS!'} message={'The answer to the universe is 42'} />
+
+<div className='container'>
+  <h1>Hello KLJS!</h1>
+  <p>The answer to the universe is 42</p>
 </div>

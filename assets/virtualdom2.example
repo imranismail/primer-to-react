@@ -1,0 +1,14 @@
+// Message component being used in JSX
+<Message title={'Hello KLJS!'} message={'Learn you some React for great good!!'} />
+                      ^
+                Props changed!
+// VDOM representation of the Message component with props changing
+const Message = {
+  component: 'div',
+  props: { className: 'container', }
+  children: [                                                    Reflected here!
+    // Node changed                                                    V
+    { component: 'h1', props: { className: 'header' }, children: 'Hello KLJS' },
+    { component: 'p', props: { className: 'header' }, children: 'Learn you some React for great good!!' }
+  ]
+}

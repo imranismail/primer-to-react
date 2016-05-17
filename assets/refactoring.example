@@ -1,0 +1,127 @@
+class Unsplash extends React.Component {
+  getInitialState() {
+    let initialState
+
+    fetch('https://unsplash.it/list')
+      .then(response => response.json())
+      .then(json => initialState = { images: json })
+      .catch(error => initialState = { error: "Something went wrong"})
+
+    return initialState
+  }
+
+  render() {
+    return (
+      <div className="gallery">
+        { this.state.error
+          ? <p>{ this.state.error }</p>
+          : <ul className="gallery-list">
+              { this.state.images.map(image =>
+                  <li key={ image.id }>
+                    <a href={ image.author_url }>
+                      <span>Author: { image.author }</span>
+                    </a>
+                    <img src={ image.post_url } alt={ image.filename } />
+                  </li>
+              )}
+            </ul>
+        }
+      </div>
+    )
+  }
+}
+
+class Gallery extends React.Component {
+  render () {
+    <ul className="gallery-list">
+      { this.props.images.map(image =>
+          <li key={ image.id }>
+            <a href={ image.author_url }>
+              <span>Author: { image.author }</span>
+            </a>
+            <img src={ image.post_url } alt={ image.filename } />
+          </li>
+      )}
+    </ul>
+  }
+}
+
+class Unsplash extends React.Component {
+  getInitialState() {
+    let initialState
+
+    fetch('https://unsplash.it/list')
+      .then(response => response.json())
+      .then(json => initialState = { images: json })
+      .catch(error => initialState = { error: "Something went wrong"})
+
+    return initialState
+  }
+
+  render() {
+    return (
+      <div className="gallery">
+        { this.state.error
+          ? <p>{ this.state.error }</p>
+          : <Gallery images={ this.state.images } />
+        }
+      </div>
+    )
+  }
+}
+
+const Image = ({ id, author, author_url, post_url, filename }) =>
+  <li className='gallery__image' key={ id }>
+    <a href={ author_url }>
+      <span>Author: { author }</span>
+    </a>
+    <img src={ post_url } alt={ filename } />
+  </li>
+
+const Gallery = ({ images }) =>
+  <ul className="gallery">
+    { images.map((image) => <Image { ...image } />) }
+  </ul>
+
+class Unsplash extends React.Component {
+  getInitialState() {
+    let initialState
+
+    fetch('https://unsplash.it/list')
+      .then(response => response.json())
+      .then(json => initialState = { images: json })
+      .catch(error => initialState = { error: "Something went wrong"})
+
+    return initialState
+  }
+
+  render() {
+    return (
+      <div className="unsplash">
+        { this.state.error
+          ? <p>{ this.state.error }</p>
+          : <Gallery images={ this.state.images } />
+        }
+      </div>
+    )
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,9 +1,9 @@
 // ES5 stateful class
 const HelloWorld = React.createClass({
-  render() {
+  render () {
     return (
       <div>
-        <h1>Hello World</h1>
+        <h1>{ helloWorld }</h1>
       </div>
     )
   }
@@ -11,7 +11,7 @@ const HelloWorld = React.createClass({
 
 // ES6 stateful class
 class HelloWorld extends React.Component {
-  render() {
+  render () {
     return (
       <div>
         <h1>Hello World</h1>
