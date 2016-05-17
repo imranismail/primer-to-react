@@ -2,7 +2,9 @@
 const HelloWorld = React.createClass({
   render() {
     return (
-      <h1>Hello World</h1>
+      <div>
+        <h1>Hello World</h1>
+      </div>
     )
   }
 })
@@ -11,7 +13,9 @@ const HelloWorld = React.createClass({
 class HelloWorld extends React.Component {
   render() {
     return (
-      <h1>Hello World</h1>
+      <div>
+        <h1>Hello World</h1>
+      </div>
     )
   }
 }
@@ -19,6 +23,8 @@ class HelloWorld extends React.Component {
 // Stateless functional component
 const HelloWorld = () => {
   return (
-    <h1>Hello World</h1>
+    <div>
+      <h1>Hello World</h1>
+    </div>
   )
 }

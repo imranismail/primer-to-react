@@ -217,6 +217,58 @@ export default class Presentation extends React.Component {
               VirtualDOM
             </Text></Appear>
             <Appear><CodePane lang="js" source={require("raw!../assets/virtualdom.example")} margin="20px auto"/></Appear>
+            <Appear><Text textSize="1.0em" margin="25px 0px 0px" bold textColor="tertiary">
+              and this is where all the Magic happens!
+            </Text></Appear>
+            <List textColor="tertiary">
+              <Appear><ListItem>diffing and shallow rendering</ListItem></Appear>
+              <Appear><ListItem>lifecycle hooks</ListItem></Appear>
+              <Appear><ListItem>synthetic events</ListItem></Appear>
+            </List>
+          </Slide>
+          <Slide transition={["slide"]} bgColor="primer" align="center">
+            <Heading size={1} fit caps lineHeight={1} textColor="white">
+              How does it work?
+            </Heading>
+            <Layout>
+              <Fill>
+                <Text textSize="1.00em" padding="10%" margin="25px 0px 50px" bgColor="#7986CB" textColor="tertiary">
+                  Components
+                </Text>
+              </Fill>
+              <Fill>
+                <Text textSize="1.00em" padding="10%" margin="25px 0px 50px" textColor="tertiary" align="center">
+                  ➜
+                </Text>
+              </Fill>
+              <Fill>
+                <Text textSize="1.00em" padding="10%" margin="25px 0px 50px" bgColor="#43A047" textColor="tertiary">
+                  VirtualDOM
+                </Text>
+              </Fill>
+              <Fill>
+                <Text textSize="1.00em" padding="10%" margin="25px 0px 50px" textColor="tertiary" align="center">
+                  ➜
+                </Text>
+              </Fill>
+              <Fill>
+                <Text textSize="1.00em" padding="10%" margin="25px 0px 50px" bgColor="#EF5350" textColor="tertiary">
+                  DOM
+                </Text>
+              </Fill>
+            </Layout>
+            <Appear><Text textSize="1.00em" padding="2%" margin="10px 0px 50px" bgColor="#EF5350" textColor="tertiary">
+              DOM
+            </Text></Appear>
+            <Appear><CodePane lang="js" source={require("raw!../assets/dom.example")} margin="20px auto"/></Appear>
+            <List textColor="tertiary">
+              <Appear><ListItem>knows nothing of business logic</ListItem></Appear>
+              <Appear><ListItem>yet are dynamically rendered</ListItem></Appear>
+              <Appear><ListItem>unidirectional data flow, not two-way data binding</ListItem></Appear>
+            </List>
+            <Appear><Text textSize="1.0em" margin="25px 0px 0px" bold textColor="tertiary">
+              that is all there to it 🎉🎉
+            </Text></Appear>
           </Slide>
         </Deck>
       </Spectacle>
